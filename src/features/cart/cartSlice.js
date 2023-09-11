@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import toast from 'react-hot-toast';
 
 const initialState = {
   cart: [
@@ -19,17 +20,20 @@ const cartSlice = createSlice({
     addItem(state, action) {
       //action.payload => pizza object
       state.cart.push(action.payload);
+      toast.success('Pizza added!!');
     },
 
     deleteItem(state, action) {
       //action.payload => pizzaId
       state.cart = state.cart.filter((item) => item.pizzaId !== action.payload);
+      toast.success('Pizza deleted!!');
     },
 
     increaseItemQuantity(state, action) {
       const item = state.cart.find((item) => item.pizzaId === action.payload);
       item.quantity++;
       item.totalPrice = item.unitPrice * item.quantity;
+      toast.success('Quantity increased');
     },
 
     decreaseItemQuantity(state, action) {
@@ -37,11 +41,11 @@ const cartSlice = createSlice({
       console.log(item);
       item.quantity--;
       item.totalPrice = item.unitPrice * item.quantity;
+      toast.success('Quantity decreased');
       if (item.quantity === 0) cartSlice.caseReducers.deleteItem(state, action);
     },
 
     clearCart(state) {
-      console.log('executed');
       state.cart = [];
     },
   },
