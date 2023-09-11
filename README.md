@@ -1,8 +1,17 @@
-# React + Vite
+# ITALIANO PIZZA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### The Project
 
-Currently, two official plugins are available:
+- This project was made to under `react-router` and `redux toolkit` properly
+- Pop-ups are implemented using `react-hot-toast`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##### Inside the App
+
+- Add/Delete pizzas to the cart, increase/decrease cart items
+- After ordering the pizza, order is assigned an _Id_
+- Previous orders can be searched using the _Id_ in the _#Search Order_ present in the navbar
+
+#### Setting up the app
+
+- Install the dependencies : `npm i`
+- Start the application : `npm run dev` and then `ctrl + click` on the provided localhost url
