@@ -2,7 +2,7 @@
 
 #### The Project
 
-- This project was made to under `react-router` and `redux toolkit` properly
+- This project was made to understand `react-router` and `redux toolkit` properly
 - Pop-ups are implemented using `react-hot-toast`
 
 ##### Inside the App
